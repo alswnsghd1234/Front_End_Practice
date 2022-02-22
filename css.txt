@@ -1,0 +1,77 @@
+기본 문법, 주석
+
+선택자{속성:값;}
+선택자{속성:값;속성:값;}
+
+div{color:red;}
+
+div는 태그요소
+
+div{color:red;margin:20px;}
+
+margin은 요소 외부 여백
+
+-- 선언 방식 --
+
+내장 방식 : HTML에 전부 묶어서 스타일을 작성하는 방식
+인라인 방식 : <div style="color: red; margin: 20px;"></div>
+ㄴ 유지보수하는것에 매우 힘들다. 자식에서 조상 요소를 덮어쓰기가 안된다.
+<link rel="stylesheet" href="./css/main.css">
+ㄴ 병렬 방식
+<link rel="stylesheet" href="./css/main.css">
+@import url("./box.css");
+ㄴ css에서 또 다른 css를 가져온다. 직렬로 연결
+
+CSS 선택자
+1. 기본
+2. 복합
+3. 가상 클래스
+4. 가상 속성
+
+* 는 모든 요소를 선택
+*{
+  color:red;
+}
+li{
+  color:red;
+}
+.orange{
+  color:red;
+}-> . 은 클래스를 의미한다.
+
+#orange{
+  color:red;
+} -> id라는 속성에 orange 속성에 적용한다.
+
+복합 선택자.
+
+1. 일치 선택자
+
+span.orange{
+  color:red;
+} -> 태그 선택자와 클래스 선택자가 동시에 만족하는 것을 찾아라는 의미한다.
+
+2. 복합 선택자
+ul > .orange{
+  color: red;
+} ul 태그 안에 있는 클래스중 orange 요소 찾기
+
+3. 하위 선택자
+
+div .orange{
+  color:red;
+}
+
+4. 인접 형제 선택자
+
+.orange + li{
+  color:red;
+}
+-> orange 클래스 다음 li 태그요소 하나!
+
+5. 다음 형제 선택자
+
+.orange ~ li{
+  color:red;
+}
+-> orange 클래스 아래 li 태그 전체 적용
