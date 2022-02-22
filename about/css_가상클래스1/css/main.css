@@ -1,0 +1,36 @@
+.box{
+  width:100px;
+  height: 100px;
+  background-color: orange;
+  transition: 1s;
+}
+.box:focus{
+  width: 300px;
+  background-color: royalblue;
+}
+input:focus{
+  background-color: orange;
+}
+.fruits div:first-child{
+  color:red;
+}
+.fuits h3:last-child{
+  color:red;
+}
+.fruits *:nth-child(2n){ /* n은 0부터 시작 2n은 짝수를 나타냄*/
+  color:red; 
+} /* fruits 클래스의 후손이어야 하며, 두번째 요소이어야 한다.*/
+
+
+
+/* 
+가상 클래스 선택자: 마우스 커서가 올라가 있는 동안 선택
+a:hover{
+  color:red;
+}
+a:active{
+  color:red;
+input:focus{
+  background-color: orange;
+}
+*/
