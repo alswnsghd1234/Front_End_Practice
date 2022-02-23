@@ -21,6 +21,17 @@ input:focus{
   color:red; 
 } /* fruits 클래스의 후손이어야 하며, 두번째 요소이어야 한다.*/
 
+.fruits *:nth-child(2n+1){ /* n은 0부터 시작 2n은 홀수를 나타냄*/
+  color:red; 
+} 
+.fruits *:nth-child(n+2){ /* 2번째 요소부터 적용*/
+  color:red; 
+} 
+.fruits *:not(span){ /*span 태그가 아닌 모든 요소*/
+  color:red; 
+} 
+
+
 
 
 /* 
